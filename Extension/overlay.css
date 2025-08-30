@@ -1,0 +1,49 @@
+/* Add fade-in animation for overlay */
+#folp-overlay {
+    animation: fadeIn 0.3s ease-in-out;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2147483647; /* very high */
+    font-family: Arial, sans-serif;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#folp-box {
+    min-width: 300px;
+    max-width: 420px;
+    background: rgba(255,255,255,0.06); /* near-transparent */
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+#folp-top { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+#folp-top button { 
+    background: transparent; 
+    border: none; 
+    color: #fff; 
+    font-size: 16px; 
+    cursor: pointer; 
+}
+
+#folp-body { 
+    margin-top: 8px; 
+    max-height: 60vh; 
+    overflow: auto; 
+}
+
+.folp-loading { opacity: 0.9; }
+.folp-error { color: #ffd1d1; }
+.folp-result { white-space: pre-wrap; font-size: 12px; }
