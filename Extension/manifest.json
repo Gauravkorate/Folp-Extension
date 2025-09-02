@@ -13,7 +13,11 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "Folp"
+    "default_title": "Folp",
+    "default_popup": "popup.html",
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
   },
   "content_scripts": [
     {
